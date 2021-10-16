@@ -16,18 +16,20 @@ const Accordion = ({ data }) => {
   }
 
   return (
-    <section>
-      <h2>Questions And Answers About Login</h2>
-      {data.map((data) => {
-        return (
-          <String
-            key={data.id}
-            data={data}
-            onState={data.id === visible ? true : false}
-            changeVisibility={changeVisibility}
-          />
-        );
-      })}
+    <section className="basic">
+      <h1>Questions And Answers About Login</h1>
+      <div>
+        {data.map((data) => {
+          return (
+            <String
+              key={data.id}
+              data={data}
+              onState={data.id === visible ? true : false}
+              changeVisibility={changeVisibility}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 };

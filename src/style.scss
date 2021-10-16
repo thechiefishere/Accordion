@@ -1,0 +1,77 @@
+$andada: "Andada Pro", serif;
+$nunito2: "Nunito", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+.basic {
+  border-radius: 10px;
+}
+
+body {
+  background-color: rgb(49, 24, 77);
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: #efefef;
+  section {
+    box-shadow: 3px 3px 15px #444;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    // background-color: red;
+    h1 {
+      font-family: $nunito2;
+      font-weight: 600;
+    }
+    article {
+      margin: 20px 0px;
+      border: 2px solid #fff;
+      background-color: #fff;
+      padding: 5px 10px;
+      box-shadow: 1px 1px 10px #aaa;
+      font-family: $andada;
+      //   font-weight: 600;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        button {
+          display: block;
+          height: 5vh;
+          width: 30px;
+          border-radius: 50%;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 80%;
+    margin-top: 90px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    width: 70%;
+    margin-top: 120px;
+
+    section {
+      display: flex;
+      h1 {
+        flex: 1;
+      }
+      div {
+        flex: 2;
+      }
+    }
+  }
+}

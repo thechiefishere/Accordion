@@ -4,7 +4,7 @@ const String = ({ data, onState, changeVisibility }) => {
   }
 
   return (
-    <article>
+    <article className="basic">
       <div>
         <h3>{data.title}</h3>
         <button onClick={decide}>{onState ? "-" : "+"}</button>
