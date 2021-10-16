@@ -1,11 +1,15 @@
-const String = ({ data }) => {
+const String = ({ data, onState, changeVisibility }) => {
+  function decide() {
+    changeVisibility(data.id);
+  }
+
   return (
     <article>
       <div>
         <h3>{data.title}</h3>
-        <button>+</button>
+        <button onClick={decide}>{onState ? "-" : "+"}</button>
       </div>
-      <p>{data.info}</p>
+      {onState && <p>{data.info}</p>}
     </article>
   );
 };
